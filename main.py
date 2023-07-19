@@ -101,12 +101,6 @@ class Game:
         self.HeadRect = self.ninjaHead.get_rect()
         self.HeadRect.center = (HealthX-50, HealthY+15)
 
-        # The katana
-        self.sword = pg.image.load(KATANA[0])
-        self.sword = pg.transform.scale(self.sword, (400, 400))
-        self.sword.set_colorkey(BLACK)
-        self.rectSword = self.sword.get_rect()
-
         self.plat = Platform(dirtImg, 140, 284)
 
         self.current_tile = (50, 50, 0, 0)
@@ -1096,7 +1090,11 @@ class Game:
     def highScore(self):
         with open("All_graphism_sounds/score.txt", "r") as file:
             line = file.readline()
-        return int(str.rstrip(line))
+        try:
+            result = int(str.rstrip(line))
+        except ValueError:
+            result = 0
+        return result
 
     # Function that update the score
     def updateScore(self, New_value):
@@ -1116,7 +1114,7 @@ class Game:
 
         # Rewriting file in ascending score order
         with open("All_graphism_sounds/score.txt", "w") as file:
-            for i in range(10):
+            for i in range(len(Score) - 1):
                 file.write(str(Score[i]))
                 file.write("\n")
 

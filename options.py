@@ -41,19 +41,19 @@ KATANA = ['All_graphism_sounds/katana/katana_1.tiff', 'All_graphism_sounds/katan
 
 ########################## SOUND EFFECTS AND MUSICS
 
-jump_fx = pg.mixer.Sound("All_graphism_sounds/sound_effects/jump.wav")
+jump_fx = pg.mixer.Sound("./All_graphism_sounds/sound_effects/jump.wav")
 jump_fx.set_volume(0.1)
 
-play_theme_fx = pg.mixer.Sound("All_graphism_sounds/sound_effects/play_theme.wav")
+play_theme_fx = pg.mixer.Sound("./All_graphism_sounds/sound_effects/play_theme.wav")
 play_theme_fx.set_volume(0.1)
 
-menu_theme_fx = pg.mixer.Sound("All_graphism_sounds/sound_effects/menu_theme.wav")
+menu_theme_fx = pg.mixer.Sound("./All_graphism_sounds/sound_effects/main_menu.wav")
 menu_theme_fx.set_volume(0.1)
 
-die_theme_fx = pg.mixer.Sound("All_graphism_sounds/sound_effects/die.wav")
+die_theme_fx = pg.mixer.Sound("./All_graphism_sounds/sound_effects/die.wav")
 die_theme_fx.set_volume(0.1)
 
-wining_theme_fx = pg.mixer.Sound("All_graphism_sounds/sound_effects/winning.wav")
+wining_theme_fx = pg.mixer.Sound("./All_graphism_sounds/sound_effects/winning.wav")
 wining_theme_fx.set_volume(0.1)
 
 ########################## ALL THE LEVELS
